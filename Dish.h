@@ -13,8 +13,16 @@ private:
 	int m_value;
 
 public:
-	Dish();
+	Dish(char* name, DishType type, int value);
+	Dish(Dish& dish);
 	~Dish();
 
-	
+	char* getName() { return m_name; }
+	void setName(char* name) { m_name = name; }
+
+	DishType getDishType() { return m_dishtype; }
+	void setDishType(DishType dishtype) { m_dishtype = dishtype; }
+
+	int getValue() { return m_value; }
+	void setValue(int value) { m_value = value; }
 };

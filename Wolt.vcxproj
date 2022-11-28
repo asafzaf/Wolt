@@ -27,6 +27,11 @@
     <ClInclude Include="Order.h" />
     <ClInclude Include="Restaurant.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Dish.cpp" />
+    <ClCompile Include="Menu.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
