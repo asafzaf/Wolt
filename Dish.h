@@ -15,6 +15,7 @@ private:
 public:
 	Dish(char* name, DishType type, int value);
 	Dish(Dish& dish);
+	Dish();
 	~Dish();
 
 	char* getName() { return m_name; }

@@ -4,14 +4,14 @@
 
 class Restaurant {
 private:
-	char* m_name;
+	const char* m_name;
 	Adress* m_adress;
 	Menu m_menu;
 
 public:
 	Restaurant();
 	Restaurant(Dish* dishes);
-	Restaurant(char* name, Adress* adress, Dish* dishes);
+	Restaurant(const char* name, Adress* adress, Dish* dishes);
 	~Restaurant();
 
 	char* getName() { return m_name; }

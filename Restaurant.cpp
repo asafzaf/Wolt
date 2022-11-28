@@ -1,7 +1,7 @@
 #include "Restaurant.h"
 
 
-Restaurant::Restaurant(char* name, Adress* adress, Dish* dishes) {
+Restaurant::Restaurant(const char* name, Adress* adress, Dish* dishes) {
 	m_name = name;
 	m_adress = adress;
 	m_menu.setDishes(dishes);

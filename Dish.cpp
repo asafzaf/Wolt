@@ -19,6 +19,12 @@ Dish::Dish(char* name, DishType type, int value) {
 //
 //}
 
+Dish::Dish() {
+	m_name = nullptr;
+	m_dishtype = Appetizer;
+	m_value = 0;
+}
+
 Dish::~Dish() {
 	delete m_name;
 }
