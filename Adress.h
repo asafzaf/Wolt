@@ -7,7 +7,7 @@ private:
 
 public:
 
-	Adress();
+	Adress(char* city, int street);
 	Adress(const Adress& adress);
 	~Adress();
 	int getStreet() { return m_street; }

@@ -10,6 +10,8 @@ private:
 
 public:
 	Restaurant();
+	Restaurant(Dish* dishes);
+	Restaurant(char* name, Adress* adress, Dish* dishes);
 	~Restaurant();
 
 	char* getName() { return m_name; }
@@ -20,4 +22,6 @@ public:
 
 	Menu getMenu() { return m_menu; }
 	void setMenu(Menu menu) { m_menu = menu; }
+
+	
 };

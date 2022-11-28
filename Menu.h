@@ -6,6 +6,7 @@ private:
 	Dish* m_dishes;
 	//int m_numOfDishes;
 public:
+	Menu();
 	Menu(Dish* dish);
 	~Menu();
 

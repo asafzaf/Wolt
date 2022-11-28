@@ -15,9 +15,9 @@ Dish::Dish(char* name, DishType type, int value) {
 
 }
 
-Dish::Dish(Dish& dish) { // Copy constructor;
-
-}
+//Dish::Dish(Dish& dish) { // Copy constructor;
+//
+//}
 
 Dish::~Dish() {
 	delete m_name;
