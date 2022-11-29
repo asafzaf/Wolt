@@ -15,9 +15,11 @@ Dish::Dish(char* name, DishType type, int value) {
 
 }
 
-//Dish::Dish(Dish& dish) { // Copy constructor;
-//
-//}
+Dish::Dish(Dish& dish) { // Copy constructor;
+	m_name = dish.m_name;
+	m_dishtype = dish.m_dishtype;
+	m_value = dish.m_value;
+}
 
 Dish::Dish() {
 	m_name = nullptr;

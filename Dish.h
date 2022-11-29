@@ -8,17 +8,17 @@ enum DishType {
 
 class Dish {
 private:
-	char* m_name;
+	const char* m_name;
 	DishType m_dishtype;
 	int m_value;
 
 public:
-	Dish(char* name, DishType type, int value);
+	Dish(const char* name, DishType type, int value);
 	Dish(Dish& dish);
 	Dish();
 	~Dish();
 
-	char* getName() { return m_name; }
+	const char* getName() { return m_name; }
 	void setName(char* name) { m_name = name; }
 
 	DishType getDishType() { return m_dishtype; }

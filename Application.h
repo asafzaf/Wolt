@@ -6,20 +6,20 @@
 class Application {
 private:
 	Client* m_client;
-	Restaurant* m_retaurant;
-	Order* m_order;
+	Restaurant** m_retaurant;
+	Order** m_order;
 
 public:
-	Application(Restaurant* restaurant);
+	Application(Restaurant** restaurant);
 	~Application();
 
 	Client* getClient() { return m_client; }
 	void setClient(Client* client) { m_client = client; }
 
-	Restaurant* getRestaurant() { return m_retaurant; }
-	void setRestaurant(Restaurant* restaurant) { m_retaurant = restaurant; }
+	Restaurant** getRestaurant() { return m_retaurant; }
+	void setRestaurant(Restaurant** restaurant) { m_retaurant = restaurant; }
 
-	Order* getOrder() { return m_order; }
-	void setOrder(Order* order) { m_order = order; }
+	Order** getOrder() { return m_order; }
+	void setOrder(Order** order) { m_order = order; }
 
 };

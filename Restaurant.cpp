@@ -18,3 +18,8 @@ Restaurant::Restaurant() : m_menu()
 	m_name = nullptr;
 	m_adress = nullptr;
 }
+
+Restaurant::~Restaurant() {
+	delete m_name;
+	delete m_adress;
+}

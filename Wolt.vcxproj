@@ -28,6 +28,7 @@
     <ClInclude Include="Restaurant.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Adress.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Dish.cpp" />
     <ClCompile Include="Main.cpp" />

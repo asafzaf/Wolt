@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Application.h"
 
-Application::Application(Restaurant* restaurant) {
+Application::Application(Restaurant** restaurant) {
 
 	m_order = nullptr;
 
@@ -39,7 +39,7 @@ Application::Application(Restaurant* restaurant) {
 	if (m_client == NULL) {
 		std::cout << "Memory Error!" << std::endl;
 	}
-	m_retaurant = new Restaurant[5];
+	m_retaurant = new Restaurant*[5];
 	if (m_retaurant == NULL) {
 		std::cout << "Memory Error!" << std::endl;
 	}
