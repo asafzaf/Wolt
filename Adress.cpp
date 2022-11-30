@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Adress.h"
 
-Adress::Adress(char* city, int street) {
+Adress::Adress(const char* city, int street) {
 	m_city = city;
 	m_street = street;
 }

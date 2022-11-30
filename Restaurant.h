@@ -10,11 +10,10 @@ private:
 
 public:
 	Restaurant();
-	Restaurant(Dish* dishes);
-	Restaurant(const char* name, Adress* adress, Dish* dishes);
+	Restaurant(const char* name, Adress* adress, Dish** dishes);
 	~Restaurant();
 
-	char* getName() { return m_name; }
+	const char* getName() { return m_name; }
 	void setName(char* name) { m_name = name; }
 
 	Adress* getAdress() { return m_adress; }

@@ -1,5 +1,7 @@
 #include "Application.h"
 
+Restaurant** RestaurantList();
+
 int main() {
 	Restaurant** Restaurant_List = RestaurantList();
 	Application app(Restaurant_List);
@@ -28,33 +30,33 @@ Restaurant** RestaurantList() {
 	dishset2[3] = new Dish("HotVegDog", MainCourse, 25);
 	dishset2[4] = new Dish("NOT cheese cake", Dessert, 20);
 
-	dishset3[0] = new Dish();
-	dishset3[1] = new Dish();
-	dishset3[2] = new Dish();
-	dishset3[3] = new Dish();
-	dishset3[4] = new Dish();
+	dishset3[0] = new Dish("Pottato Chips", Appetizer, 15);
+	dishset3[1] = new Dish("Meat Balls", MainCourse, 20);
+	dishset3[2] = new Dish("Schnizel", MainCourse, 30);
+	dishset3[3] = new Dish("Coco Cake", Dessert, 15);
+	dishset3[4] = new Dish("Lemon Pai", Dessert, 20);
 
-	dishset4[0] = new Dish();
-	dishset4[1] = new Dish();
-	dishset4[2] = new Dish();
-	dishset4[3] = new Dish();
-	dishset4[4] = new Dish();
+	dishset4[0] = new Dish("Bamba candy", Appetizer, 15);
+	dishset4[1] = new Dish("Cookies", Appetizer, 15);
+	dishset4[2] = new Dish("Vanilla Cake", Dessert, 15);
+	dishset4[3] = new Dish("Sufgania", Dessert, 20);
+	dishset4[4] = new Dish("Marshmello Coffe", Dessert, 20);
 
-	dishset5[0] = new Dish();
-	dishset5[1] = new Dish();
-	dishset5[2] = new Dish();
-	dishset5[3] = new Dish();
+	dishset5[0] = new Dish("Chicken Bun", Appetizer, 20);
+	dishset5[1] = new Dish("Fad Thai", MainCourse, 35);
+	dishset5[2] = new Dish("Fad Siu", MainCourse, 35);
+	dishset5[3] = new Dish("Misu Soup", Dessert, 20);
 
-	Adress add1("Tel Aviv", 11);
-	//Adress add2("Ramat Gan", 7);
-	//Adress add3("Beer Sheva", 23);
-	//Adress add4("Tel aviv", 29);
-	//Adress add5("lisbon", 55);
+	Adress* add1 = new Adress("Tel Aviv", 11);
+	Adress* add2 = new Adress("Ramat Gan", 7);
+	Adress* add3 = new Adress("Tel Aviv", 23);
+	Adress* add4 = new Adress("Tel aviv", 29);
+	Adress* add5 = new Adress("Yahud", 55);
 
 	Restaurant** list = new Restaurant*[5];
 	list[0] = new Restaurant("KFC", add1, dishset1);
 	list[1] = new Restaurant("OnlyVegan", add2, dishset2);
-	list[2] = new Restaurant("Asaf's Caffe", add3, dishset3);
+	list[2] = new Restaurant("Asaf's Coffe", add3, dishset3);
 	list[3] = new Restaurant("Show Room", add4, dishset4);
 	list[4] = new Restaurant("The Thai House", add5, dishset5);
 

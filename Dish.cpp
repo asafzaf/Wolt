@@ -2,7 +2,7 @@
 #include "Dish.h"
 
 
-Dish::Dish(char* name, DishType type, int value) {
+Dish::Dish(const char* name, DishType type, int value) {
 	m_dishtype = type;
 	m_value = value;
 	
