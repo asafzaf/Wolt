@@ -22,4 +22,6 @@ public:
 	Order** getOrder() { return m_order; }
 	void setOrder(Order** order) { m_order = order; }
 
+	void PlaceOrder();
+
 };

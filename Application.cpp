@@ -54,3 +54,7 @@ Application::~Application() {
 	delete m_retaurant;
 	delete m_order;
 }
+
+void Application::PlaceOrder() {
+
+}

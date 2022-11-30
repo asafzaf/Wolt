@@ -12,6 +12,19 @@ Adress::Adress(const Adress& adress) {
 
 }
 
+Adress& Adress::operator=(const Adress& adress) {
+	if (this == &adress) return *this;
+	if (strlen(adress.m_city) != strlen(m_city)) {
+		delete m_city;
+		m_city = new char[strlen(adress.m_city) + 1];
+	}
+	m_city = adress.m_city;
+	m_street = adress.m_street;
+
+	return *this;
+}
+
+
 Adress::~Adress() {
 	delete m_city;
 }

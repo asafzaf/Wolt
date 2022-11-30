@@ -12,5 +12,5 @@ public:
 	Dish** getDishes() { return m_dishes; }
 	void setDishes(Dish** dishes) { m_dishes = dishes; }
 	void printDishes();
-	Dish* SelectDish();
+	Dish* SelectDishByIndex();
 };

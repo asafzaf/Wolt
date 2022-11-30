@@ -9,7 +9,6 @@ private:
 	Adress m_address;
 
 public:
-	Client();
 	Client(char* name, char* phone_num, Adress adress);
 	~Client();
 	
