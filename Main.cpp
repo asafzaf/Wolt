@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Application.h"
 
 Restaurant** RestaurantList();
@@ -9,8 +10,20 @@ int main() {
 	Application app(Restaurant_List);
 
 	int choice = 99;
-	while (choice != 0) {
 
+	while (choice != 0) {
+		
+		cout << "Hello " << app.getClient()->getName() << endl
+			<< "-------------------------" << endl
+			<< "       -Wolt Menu-" << endl
+			<< "-------------------------" << endl
+			<< "1- Place an order" << endl
+			<< "2- View recent orders" << endl
+			<< "3- View your details" << endl
+			<< "Please choose an option: ";
+
+		cin >> choice;
+		
 		switch (choice)
 		{
 		case 1:
@@ -21,6 +34,7 @@ int main() {
 			break;
 
 		default:
+			cout << " ";
 			break;
 		}
 	}

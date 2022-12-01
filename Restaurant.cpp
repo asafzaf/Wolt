@@ -1,12 +1,19 @@
+#include <iostream>
 #include "Restaurant.h"
 
 
 Restaurant::Restaurant(const char* name, Adress* adress, Dish** dishes) {
-	m_name = name;
+
+	m_name = new char[strlen(name) + 1];
+	strncpy(m_name, name, strlen(name));
 	m_adress = adress;
 	m_menu.setDishes(dishes);
 }
 
+//Restaurant& Restaurant::operator = (const Restaurant& restaurant) {
+//	if (this == &restaurant) return *this;
+//	if ()
+//}
 
 
 Restaurant::Restaurant() : m_menu()
