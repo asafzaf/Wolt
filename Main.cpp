@@ -2,14 +2,31 @@
 
 Restaurant** RestaurantList();
 
+using namespace std;
+
 int main() {
 	Restaurant** Restaurant_List = RestaurantList();
 	Application app(Restaurant_List);
 
+	int choice = 99;
+	while (choice != 0) {
 
+		switch (choice)
+		{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+
+		default:
+			break;
+		}
+	}
 
 	return 0;
-}
+};
 
 
 Restaurant** RestaurantList() {

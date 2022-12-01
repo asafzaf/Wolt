@@ -6,7 +6,7 @@ private:
 	const char* m_city;
 
 public:
-
+	Adress();
 	Adress(const char* city, int street);
 	Adress(const Adress& adress);
 	Adress& operator=(const Adress& adress);

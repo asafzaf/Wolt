@@ -55,6 +55,7 @@ Application::~Application() {
 	delete m_order;
 }
 
+
 void Application::PlaceOrder() {
 
 }

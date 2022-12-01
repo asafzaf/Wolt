@@ -1,6 +1,11 @@
 #include <iostream>
 #include "Adress.h"
 
+Adress::Adress() {
+	m_city = new char[10];
+	m_street = 0;
+}
+
 Adress::Adress(const char* city, int street) {
 	m_city = city;
 	m_street = street;
