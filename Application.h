@@ -3,6 +3,8 @@
 #include "Client.h"
 #include "Order.h"
 
+//---        Application.h          ---//
+
 class Application {
 private:
 	Client* m_client;
@@ -13,6 +15,12 @@ public:
 	Application(Restaurant** restaurant);
 	~Application();
 
+	//---      Methods      ---//
+	void PlaceOrder();
+	int chooseRestaurant();
+	Restaurant* SelectRestaurantByIndex(int Index);
+
+	//--- Getters & setters ---//
 	Client* getClient() { return m_client; }
 	void setClient(Client* client) { m_client = client; }
 
@@ -21,7 +29,5 @@ public:
 
 	Order** getOrder() { return m_order; }
 	void setOrder(Order** order) { m_order = order; }
-
-	void PlaceOrder();
 
 };

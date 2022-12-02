@@ -1,6 +1,8 @@
 #pragma once
 #include "Adress.h"
 
+//---        Client.h          ---//
+
 class Client {
 private:
 	char* m_name;
@@ -12,6 +14,7 @@ public:
 	Client(char* name, char* phone_num, Adress adress);
 	~Client();
 	
+	//--- Getters & setters ---//
 	char* getName() { return m_name; }
 	void setName(char* name) { m_name = name; }
 

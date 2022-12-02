@@ -1,5 +1,7 @@
 #pragma once
 
+//---        Adress.h          ---//
+
 class Adress {
 private:
 	int m_street;
@@ -11,6 +13,8 @@ public:
 	Adress(const Adress& adress);
 	Adress& operator=(const Adress& adress);
 	~Adress();
+
+	//--- Getters & setters ---//
 	int getStreet() { return m_street; }
 	void setStrret(int street) { m_street = street; }
 };

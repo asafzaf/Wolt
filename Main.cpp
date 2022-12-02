@@ -27,6 +27,7 @@ int main() {
 		switch (choice)
 		{
 		case 1:
+			app.PlaceOrder();
 			break;
 		case 2:
 			break;
@@ -41,7 +42,6 @@ int main() {
 
 	return 0;
 };
-
 
 Restaurant** RestaurantList() {
 	Dish** dishset1 = new Dish*[4];
@@ -85,11 +85,11 @@ Restaurant** RestaurantList() {
 	Adress* add5 = new Adress("Yahud", 55);
 
 	Restaurant** list = new Restaurant*[5];
-	list[0] = new Restaurant("KFC", add1, dishset1);
-	list[1] = new Restaurant("OnlyVegan", add2, dishset2);
-	list[2] = new Restaurant("Asaf's Coffe", add3, dishset3);
-	list[3] = new Restaurant("Show Room", add4, dishset4);
-	list[4] = new Restaurant("The Thai House", add5, dishset5);
+	list[0] = new Restaurant("KFC", add1, dishset1, 4);
+	list[1] = new Restaurant("OnlyVegan", add2, dishset2, 5);
+	list[2] = new Restaurant("Asaf's Coffe", add3, dishset3, 5);
+	list[3] = new Restaurant("Show Room", add4, dishset4, 5);
+	list[4] = new Restaurant("The Thai House", add5, dishset5, 4);
 
 	return list;
 }

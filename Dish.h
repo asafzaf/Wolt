@@ -1,5 +1,8 @@
 #pragma once
 
+//---        Dish.h          ---//
+
+
 enum DishType {
 	Appetizer = 1,
 	MainCourse,
@@ -13,12 +16,13 @@ private:
 	int m_value;
 
 public:
+	Dish();
 	Dish(const char* name, DishType type, int value);
 	Dish(Dish& dish);
 	Dish& operator = (Dish& dish);
-	Dish();
 	~Dish();
 
+	//--- Getters & setters ---//
 	const char* getName() { return m_name; }
 	void setName(char* name) { m_name = name; }
 

@@ -2,6 +2,8 @@
 #include "Menu.h"
 #include "Adress.h"
 
+//---        Restaurant.h          ---//
+
 class Restaurant {
 private:
 	char* m_name;
@@ -10,9 +12,10 @@ private:
 
 public:
 	Restaurant();
-	Restaurant(const char* name, Adress* adress, Dish** dishes);
+	Restaurant(const char* name, Adress* adress, Dish** dishes, int numOfDishes);
 	~Restaurant();
 
+	//--- Getters & setters ---//
 	char* getName() { return m_name; }
 	void setName(char* name) { m_name = name; }
 
@@ -22,5 +25,4 @@ public:
 	Menu getMenu() { return m_menu; }
 	void setMenu(Menu menu) { m_menu = menu; }
 
-	
 };
