@@ -14,8 +14,6 @@ Application::Application(Restaurant** restaurant) {
 	char* name = new char[strlen(buff) + 1];
 	strcpy(name, buff);
 
-	//buff[0] = '\0';
-
 	char* phone = new char[sizeof(char)*10 +1];
 	while (buff[0] != '0' || buff[1] != '5' || strlen(buff) != 10) {
 		std::cout << "Please enter your phone number (without '-'): ";
@@ -24,7 +22,7 @@ Application::Application(Restaurant** restaurant) {
 	strcpy(phone, buff);
 
 	std::cout << "Please enter your adress:" << std::endl
-		<< "City name : ";
+		<< "City name: ";
 	std::cin >> buff;
 	char* cityname = new char[strlen(buff) +1];
 	strcpy(cityname, buff);
@@ -45,15 +43,15 @@ Application::Application(Restaurant** restaurant) {
 	}
 
 	for (int i = 0; i < 5; i++) {
-		Restaurant* ptr = restaurant[i];
+		Restaurant* ptr_src = restaurant[i];
+		Restaurant* ptr_des = m_retaurant[i];
 		char* buff = new char[20];
-		buff = ptr->getName();
+		buff = ptr_src->getName();
 		
-		m_retaurant[i]->setName(buff);
-		m_retaurant[i]->setAdress(ptr->getAdress());
-		m_retaurant[i]->setMenu(ptr->getMenu());
+		ptr_des->setName(buff);
+		ptr_des->setAdress(ptr_src->getAdress());
+		ptr_des->setMenu(ptr_src->getMenu());
 		std::cout << "hiii";
-		delete[] name;
 	}
 	std::cout << "hiii";
 	delete[] buff;

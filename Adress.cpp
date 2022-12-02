@@ -7,14 +7,15 @@ Adress::Adress() {
 }
 
 Adress::Adress(const char* city, int street) {
-	m_city = city;
+	m_city = new char[strlen(city)];
+	strncpy(m_city, city, strlen(city));
 	m_street = street;
 }
 
 Adress::Adress(const Adress& adress) {
 	m_street = adress.m_street;
-	m_city = adress.m_city;
-
+	m_city = new char[strlen(adress.m_city)];
+	strncpy(m_city, adress.m_city, strlen(adress.m_city));
 }
 
 Adress& Adress::operator=(const Adress& adress) {

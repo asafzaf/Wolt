@@ -3,7 +3,7 @@
 class Adress {
 private:
 	int m_street;
-	const char* m_city;
+	char* m_city;
 
 public:
 	Adress();
