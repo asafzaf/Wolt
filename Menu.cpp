@@ -1,12 +1,24 @@
 #include <iostream>
 #include "Menu.h"
 
+
+Menu::Menu() : m_dishes()
+{};
+
 Menu::Menu(Dish** dish) {
 	m_dishes = dish;
 }
 
-Menu::Menu() : m_dishes()
-{};
+Menu& Menu::operator = (Menu& menu) {
+	delete m_dishes;
+	m_dishes = new Dish * [5];
+	for (int i = 0; i < 5; i++) {
+		m_dishes[i] = new Dish();
+		m_dishes[i] = menu.m_dishes[i];
+	}
+	return *this;
+}
+
 
 Menu::~Menu() {
 	delete m_dishes;

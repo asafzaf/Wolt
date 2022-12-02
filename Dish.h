@@ -8,13 +8,14 @@ enum DishType {
 
 class Dish {
 private:
-	const char* m_name;
+	char* m_name;
 	DishType m_dishtype;
 	int m_value;
 
 public:
 	Dish(const char* name, DishType type, int value);
 	Dish(Dish& dish);
+	Dish& operator = (Dish& dish);
 	Dish();
 	~Dish();
 

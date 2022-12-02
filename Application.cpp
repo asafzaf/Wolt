@@ -31,28 +31,29 @@ Application::Application(Restaurant** restaurant) {
 	int streetnumber;
 	std::cin >> streetnumber;
 
+	m_retaurant = new Restaurant * [5];
+
 	Adress tempAdress = Adress(cityname, streetnumber);
 
 	m_client = new Client(name, phone, tempAdress);
 	if (m_client == NULL) {
 		std::cout << "Memory Error!" << std::endl;
 	}
-	m_retaurant = new Restaurant*[5];
 	if (m_retaurant == NULL) {
 		std::cout << "Memory Error!" << std::endl;
 	}
 
-	for (int i = 0; i < 5; i++) {
-		Restaurant* ptr_src = restaurant[i];
-		Restaurant* ptr_des = m_retaurant[i];
-		char* buff = new char[20];
-		buff = ptr_src->getName();
-		
-		ptr_des->setName(buff);
-		ptr_des->setAdress(ptr_src->getAdress());
-		ptr_des->setMenu(ptr_src->getMenu());
-		std::cout << "hiii";
-	}
+	//for (int i = 0; i < 5; i++) {
+	//	Restaurant* ptr_src = restaurant[i];
+	//	Restaurant* ptr_des = m_retaurant[i];
+	//	char* buff = new char[20];
+	//	buff = ptr_src->getName();
+	//	
+	//	ptr_des->setName(buff);
+	//	ptr_des->setAdress(ptr_src->getAdress());
+	//	ptr_des->setMenu(ptr_src->getMenu());
+	//	std::cout << "hiii";
+	//}
 	std::cout << "hiii";
 	delete[] buff;
 }

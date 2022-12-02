@@ -1,4 +1,5 @@
 #pragma once
+//#include <stdbool.h>
 #include "Dish.h"
 
 class Menu {
@@ -7,6 +8,7 @@ private:
 public:
 	Menu();
 	Menu(Dish** dish);
+	Menu& operator = (Menu& menu);
 	~Menu();
 
 	Dish** getDishes() { return m_dishes; }

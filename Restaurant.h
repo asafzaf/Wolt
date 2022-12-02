@@ -11,7 +11,6 @@ private:
 public:
 	Restaurant();
 	Restaurant(const char* name, Adress* adress, Dish** dishes);
-	//Restaurant& operator = (const Restaurant& restaurant);
 	~Restaurant();
 
 	char* getName() { return m_name; }

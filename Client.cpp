@@ -1,7 +1,7 @@
 #include "Client.h"
 #include "Adress.h"
 
-Client::Client(char* name, char* phone_num, Adress& adress) {
+Client::Client(char* name, char* phone_num, Adress adress) {
 	m_name = name;
 	m_phone_num = phone_num;
 	m_credits = 100;
