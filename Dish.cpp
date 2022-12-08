@@ -13,8 +13,8 @@ Dish::Dish() { // Default Constractor.
 Dish::Dish(const char* name, DishType type, int value) { // Constractor.
 	m_dishtype = type;
 	m_value = value;
-	
-	m_name = new char[strlen(name) + 1];
+	int len = strlen(name) + 1;
+	m_name = new char[len];
 	if (m_name == NULL) {
 		std::cout << "Memory Erorr!" << std::endl;
 		return;
@@ -23,7 +23,8 @@ Dish::Dish(const char* name, DishType type, int value) { // Constractor.
 }
 
 Dish::Dish(Dish& dish) { // Copy constructor.
-	m_name = dish.m_name;
+	m_name = new char[strlen(dish.getName() + 1)];
+	strncpy(m_name, dish.m_name, strlen(dish.getName()));
 	m_dishtype = dish.m_dishtype;
 	m_value = dish.m_value;
 }

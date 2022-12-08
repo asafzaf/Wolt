@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Client.h"
 #include "Adress.h"
 
@@ -12,6 +13,10 @@ Client::~Client() { // Default Constractor.
 Client::Client(char* name, char* phone_num, Adress adress) { // Constractor.
 	m_name = name;
 	m_phone_num = phone_num;
+	//m_name = new char[strlen(name) + 1];
+	//strncpy(m_name, name, strlen(name));
+	//m_phone_num = new char[11];
+	//strncpy(m_phone_num, phone_num, strlen(phone_num));
 	m_credits = 100;
 	m_address = Adress(adress);
 }

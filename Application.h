@@ -9,7 +9,7 @@ class Application {
 private:
 	Client* m_client;
 	Restaurant** m_retaurant;
-	Order** m_order;
+	Order* m_order;
 
 public:
 	Application(Restaurant** restaurant);
@@ -17,6 +17,7 @@ public:
 
 	//---      Methods      ---//
 	void PlaceOrder();
+	void confirm();
 	int chooseRestaurant();
 	Restaurant* SelectRestaurantByIndex(int Index);
 
@@ -27,7 +28,7 @@ public:
 	Restaurant** getRestaurant() { return m_retaurant; }
 	void setRestaurant(Restaurant** restaurant) { m_retaurant = restaurant; }
 
-	Order** getOrder() { return m_order; }
-	void setOrder(Order** order) { m_order = order; }
+	Order* getOrder() { return m_order; }
+	void setOrder(Order* order) { m_order = order; }
 
 };

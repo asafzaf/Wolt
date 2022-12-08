@@ -8,17 +8,17 @@ using namespace std;
 int main() {
 	Restaurant** Restaurant_List = RestaurantList();
 	Application app(Restaurant_List);
-
+	Client* client = app.getClient();
 	int choice = 99;
 
 	while (choice != 0) {
 		
-		cout << "Hello " << app.getClient()->getName() << endl
+		cout << "Hello " << client->getName() << endl
 			<< "-------------------------" << endl
 			<< "       -Wolt Menu-" << endl
 			<< "-------------------------" << endl
 			<< "1- Place an order" << endl
-			<< "2- View recent orders" << endl
+			<< "2- View order" << endl
 			<< "3- View your details" << endl
 			<< "Please choose an option: ";
 
@@ -30,6 +30,7 @@ int main() {
 			app.PlaceOrder();
 			break;
 		case 2:
+			app.confirm();
 			break;
 		case 3:
 			break;

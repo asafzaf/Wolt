@@ -31,14 +31,14 @@ Menu::~Menu() { // Distractor.
 
 void Menu::printDishes() { // Printing a list of dishes from Menu.
 	std::cout << "Dishes Menu:" << std::endl
-		<< "No.	|Name	|Type	|cost (nis)" << std::endl;
+		<< "\tNo.	|Name	|Type	|cost (nis)" << std::endl;
 	Dish** list = getDishes();
 	
 	for (int i = 0; i < m_num_of_dishes; i++) {
-		std::cout << i + 1
-			<< "	|" << list[i]->getName()
-			<< "	|" << list[i]->getDishType() 
-			<< "	|" << list[i]->getValue() 
+		std::cout <<"\t" << i + 1
+			<<"\t" << "	|" << list[i]->getName()
+			<<"\t" << "	|" << list[i]->getDishType()
+			<<"\t" << "	|" << list[i]->getValue() 
 			<< std::endl;
 	}
 }

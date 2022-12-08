@@ -17,4 +17,7 @@ public:
 	//--- Getters & setters ---//
 	int getStreet() { return m_street; }
 	void setStrret(int street) { m_street = street; }
+
+	char* getCity() { return m_city; }
+	void setCity(char* city) { m_city = city; }
 };
