@@ -53,7 +53,16 @@ void Order::printOrder() {
 			<< std::endl;
 		num++;
 	}
+	int time;
+	if (m_clientAdress.getStreet() > m_restaurantAdress.getStreet()) {
+		time = m_clientAdress.getStreet() - m_restaurantAdress.getStreet();
+	}
+	else if (m_clientAdress.getStreet() == m_restaurantAdress.getStreet()) {
+		time = 0;
+	}
+	else time = m_restaurantAdress.getStreet() - m_clientAdress.getStreet();
 	std::cout << std::endl << "Order sum: " << getTotalSum();
+	std::cout << std::endl << "Time to arrive: " << time << " mins.";
 
 	return;
 }
