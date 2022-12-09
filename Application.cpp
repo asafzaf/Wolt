@@ -138,7 +138,7 @@ void Application::PlaceOrder() { // Starting order process.
 	}
 }
 
-void Application::confirm() {
+void Application::confirm() { // confirm of thr order
 	if (m_order == nullptr) {
 		std::cout << "There is no order..." << std::endl;
 		return;

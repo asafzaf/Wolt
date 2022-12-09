@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Order.h"
 
-Order::Order() {
+Order::Order() { // The constractor
 	m_dishes = new Dish * [10];
 	for (int i = 0; i < 10; i++) {
 		m_dishes[i] = nullptr;
@@ -10,7 +10,7 @@ Order::Order() {
 
 }
 
-Order::~Order() {
+Order::~Order() { // Distractor
 	int num = 0;
 	while (m_dishes[num] != nullptr) {
 		delete m_dishes[num];
@@ -20,7 +20,7 @@ Order::~Order() {
 	delete[] m_dishes;
 }
 
-void Order::calculateSum(Dish** dish) {
+void Order::calculateSum(Dish** dish) { // Updating the sum of the order
 	m_totalSum = 0;
 	Dish** tempPTR = m_dishes;
 	int num = 0;
@@ -54,7 +54,7 @@ void Order::printOrder() {
 	return;
 }
 
-void Order::deleteDish() {
+void Order::deleteDish() { // Deleting dish from order
 	printOrder();
 	std::cout << "Choose the number of the dish to delete (0- to finish delete): ";
 	int index;
